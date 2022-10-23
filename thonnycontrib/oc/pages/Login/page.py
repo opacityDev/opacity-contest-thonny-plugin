@@ -23,10 +23,13 @@ class LoginPage:
 
         # 4: Connect callbacks
         builder.connect_callbacks(self)
+
+        # 5: Custom tweeks
         master.update()
         self.mainwindow.geometry("+%d+%d" % (master.winfo_x() + (master.winfo_width()/4),
                                             master.winfo_y() + (master.winfo_height()/4)))
 
+        
     def run(self):
         self.mainwindow.mainloop()
 
