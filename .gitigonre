@@ -1,2 +1,3 @@
-build
-figma-tokens.txt
+build/
+.priv/
+OpacityContest.egg-info/
