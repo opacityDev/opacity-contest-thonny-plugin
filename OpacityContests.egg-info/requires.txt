@@ -1,2 +1,0 @@
-pygubu
-thonny>=3.2.1

@@ -6,9 +6,10 @@ name="OpacityContests"
 all : build install run
 
 build:
-	rm -rf build
 	python3 setup.py bdist_wheel
 	python3 setup.py sdist
+	rm -rf build
+	rm -rf OpacityContests.egg-info
 
 install:
 	pip install ./dist/$(name)-$(ver).tar.gz
