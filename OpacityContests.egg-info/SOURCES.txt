@@ -6,6 +6,9 @@ OpacityContests.egg-info/SOURCES.txt
 OpacityContests.egg-info/dependency_links.txt
 OpacityContests.egg-info/requires.txt
 OpacityContests.egg-info/top_level.txt
-thonnycontrib/oc/plugin_loader.py
+thonnycontrib/opacity_loader.py
 thonnycontrib/oc/lib/__init__.py
 thonnycontrib/oc/pages/__init__.py
+thonnycontrib/oc/pages/Login/design.ui
+thonnycontrib/oc/pages/Login/gui.py
+thonnycontrib/oc/pages/Login/page.py

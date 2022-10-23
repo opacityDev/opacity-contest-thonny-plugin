@@ -1,12 +1,17 @@
-site-packages-dir="cd /home/darkbyte/.local/lib/python3.10/site-packages"
-.PHONY:build test
+ver=0.0.1
+name="OpacityContests"
+
+.PHONY:build install run
+
+all : build install run
 
 build:
 	rm -rf build
 	python3 setup.py bdist_wheel
 	python3 setup.py sdist
 
-test:
-	cp ./lib/thonnycontrib/* $(site-packages-dir)/thonnycontrib
-	thonny
+install:
+	pip install ./dist/$(name)-$(ver).tar.gz
 
+run:
+	thonny
