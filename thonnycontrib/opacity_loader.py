@@ -1,7 +1,6 @@
 from tkinter import Label, Text, Toplevel
 import tkinter as tk
 from thonny import get_workbench
-from tkinter.messagebox import showinfo
 from thonnycontrib.oc.pages.Login.page import LoginPage
 
 
