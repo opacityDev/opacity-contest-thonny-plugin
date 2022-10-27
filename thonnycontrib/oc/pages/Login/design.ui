@@ -8,7 +8,7 @@
       <property name="propagate">False</property>
     </containerlayout>
     <child>
-      <object class="ttk.Label" id="label2">
+      <object class="ttk.`Label" id="label2">
         <property name="font">{Roboto Mono} 24 {}</property>
         <property name="text" translatable="yes">Opacity Contests</property>
         <layout manager="pack">
@@ -27,7 +27,7 @@
       </object>
     </child>
     <child>
-      <object class="ttk.Label" id="label5">
+      <object class="ttk.Label" id="label5"> 
         <property name="font">{Roboto Mono} 12 {}</property>
         <property name="text" translatable="yes">Welcome to Opacity Contests portal on Thonny</property>
         <layout manager="pack">

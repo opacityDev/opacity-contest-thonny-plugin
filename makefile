@@ -5,13 +5,13 @@ name="OpacityContests"
 
 all : build install run
 
-build:
+build: ./thonnycontrib
 	python3 setup.py bdist_wheel
 	python3 setup.py sdist
 	rm -rf build
 	rm -rf OpacityContests.egg-info
 
-install:
+install: ./thonnycontrib
 	pip install ./dist/$(name)-$(ver).tar.gz
 
 run:
