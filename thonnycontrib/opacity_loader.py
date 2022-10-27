@@ -17,22 +17,4 @@ def load_plugin():
                                 handler=param)
 
 
-
-"""
-def manager():
-    
-    
-def hello():
-    content = get_workbench().get_editor_notebook().get_current_editor_content() 
-    top = Toplevel(master=get_workbench())
-    top.geometry("400x300")
-    top.title("FILO credentials")
-
-    txt = Text(top, height = 500, width = 500)
-    txt.insert(tk.END, content) 
-    txt.pack()
-
-    top.	deiconify()
-    
-    showinfo("Content",content)
-    """
+#content = get_workbench().get_editor_notebook().get_current_editor_content() 
