@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 ver:=0.0.1
-name:=OpacityContests
+name:=OpacityShare
 mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 current_dir := $(dir $(mkfile_path))
 env_name := devenv
