@@ -1,14 +1,14 @@
 from tkinter import Label, Text, Toplevel
 import tkinter as tk
 from thonny import get_workbench
-from thonnycontrib.oc.pages.Login.page import LoginPage
+#from thonnycontrib.oc.pages.Login.page import LoginPage
 
 
 
 def param():
-    loginPage = LoginPage(get_workbench())
-    loginPage.run() 
-    
+    #loginPage = LoginPage(get_workbench())
+    #loginPage.run() 
+    pass
 def load_plugin():
     get_workbench().add_command(command_id="opacity_contests_menu",
                                 menu_name="tools",

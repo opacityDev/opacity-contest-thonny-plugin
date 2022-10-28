@@ -1,0 +1,2 @@
+kivy
+thonny @ https://github.com/thonny/thonny/archive/refs/heads/master.zip

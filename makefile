@@ -1,18 +1,45 @@
-ver=0.0.1
-name="OpacityContests"
+SHELL := /bin/bash
+ver:=0.0.1
+name:=OpacityContests
+mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
+current_dir := $(dir $(mkfile_path))
+env_name := devenv
 
 .PHONY:build install run
 
 all : build install run
 
+first_use:
+	rm -rf devenv || true
+	virtualenv devenv
+	( \
+       source $(current_dir)$(env_name)/bin/activate; \
+       pip install -r requirements.txt; \
+	   deactivate; \
+	)
+
 build: ./thonnycontrib
-	python3 setup.py bdist_wheel
-	python3 setup.py sdist
+	( \
+       source $(current_dir)$(env_name)/bin/activate; \
+       python setup.py bdist_wheel; \
+	   python setup.py sdist; \
+	   deactivate; \
+    )
 	rm -rf build
-	rm -rf OpacityContests.egg-info
+	rm -rf $(name).egg-info
+
 
 install: ./thonnycontrib
-	pip install ./dist/$(name)-$(ver).tar.gz
+	( \
+       source $(current_dir)$(env_name)/bin/activate; \
+	   pip install $(current_dir)dist/$(name)-$(ver).tar.gz; \
+	   deactivate; \
+	)
+	rm -rf dist
 
 run:
-	thonny
+	( \
+       source $(current_dir)$(env_name)/bin/activate; \
+	   thonny; \
+	   deactivate; \
+	)
