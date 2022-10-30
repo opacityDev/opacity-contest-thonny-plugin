@@ -10,6 +10,7 @@ env_name := devenv
 all : build install run
 
 first_use:
+	sudo apt-get install python3-tk
 	rm -rf devenv || true
 	virtualenv devenv
 	( \

@@ -2,7 +2,7 @@ from re import X
 from tkinter import Label, Text, Toplevel
 import tkinter as tk
 from thonny import get_workbench 
-from thonnycontrib.opacity_share.lib.watcher import Watcher
+from opacity_share.lib.watcher import Watcher
 
 def param():
     editor_notebook = get_workbench().get_editor_notebook()

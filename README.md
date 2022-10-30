@@ -19,4 +19,4 @@ The provided makefile does all the hardwork for you
 * Cleans the directory
 * Runs thonny from the virtual environment for the test
 </br>
-all you have to do is to run in your terminal `$ make` 
+All you have to do is to run in your terminal `$ make` 
