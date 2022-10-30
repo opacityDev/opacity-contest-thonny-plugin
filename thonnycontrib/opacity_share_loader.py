@@ -5,8 +5,9 @@ from thonny import get_workbench
 from thonnycontrib.opacity_share.lib.watcher import Watcher
 
 def param():
-    text = get_workbench().get_editor_notebook().get_current_editor().get_text_widget()
-    w1 = Watcher(text)
+    editor_notebook = get_workbench().get_editor_notebook()
+    text_widget = editor_notebook.get_current_editor().get_text_widget()
+    w1 = Watcher(text_widget)
     pass  
  
 
