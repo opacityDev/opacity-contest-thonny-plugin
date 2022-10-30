@@ -23,11 +23,10 @@ setup(
     python_requires=">=3.7",
     package_data={
         "thonnycontrib" : ["*.py"],
-        "thonnycontrib.oc": ["*.py"], 
-        "thonnycontrib.oc.pages":["*.py","*/*.*"],
-        "thonnycontrib.oc.lib":["*.py"],
+        "thonnycontrib.opacity_share": ["*.py"], 
+        #"thonnycontrib.opacity_share.pages":["*.py","*/*.*"],
+        "thonnycontrib.opacity_share.lib":["*.py"],
     },
-    install_requires=["thonny>=3.2.1","pygubu"],
-
-    packages=["thonnycontrib","thonnycontrib.oc", "thonnycontrib.oc.pages", "thonnycontrib.oc.lib" ],
+    install_requires=["thonny>=3.7","kivy"],
+    packages=["thonnycontrib","thonnycontrib.opacity_share",  "thonnycontrib.opacity_share.lib" ],
 )
