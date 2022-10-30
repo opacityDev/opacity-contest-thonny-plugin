@@ -11,7 +11,6 @@ In order to prepare your environment and install all dependcies, kindly run the 
 $ make first_use
 ~~~~
 
-
 ## How to run and test your code ?
 
 The provided makefile does all the hardwork for you
