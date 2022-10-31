@@ -38,7 +38,7 @@ class Watcher():
 
     def _define_controls(self):
         # on Copy action
-        def _on_copy(self)
+        def _on_copy(self):
             tk.messagebox.showinfo(title=None,message="You copied sth i see you")
         def on_myster(self):
             tk.messagebox.showinfo(title=None,message="You did run the myster sth i see you")
