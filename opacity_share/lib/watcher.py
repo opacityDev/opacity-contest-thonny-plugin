@@ -22,7 +22,12 @@ class Watcher():
         self._define_controls()
         self.text.bind("<KeyPress>",self.key_pressed,True)
         self.text.bind("<KeyRelease>",self.key_released,True)
+        self.text.bind("<<Undo>>", self._on_undo, True)
+        self.text.bind("<<Redo>>", self._on_redo, True)
+        self.text.bind("<<Cut>>", self._on_cut, True)
+        self.text.bind("<<Copy>>", self._on_copy, True)
         self._releasing = False 
+        
         def test(selfo,*args):
             if not hasattr(self,"second_editor"):
                 return
@@ -31,6 +36,8 @@ class Watcher():
             self.second_editor.get_code_view()._vertical_scrollbar_update(selfo,args)
             editor.get_code_view()._vertical_scrollbar_update(selfo,args)
         self.text["yscrollcommand"]=test
+
+        self.text.bind()
 
     def get_second_editor(self):
         self.second_editor=self.editor_notebook.get_current_editor()    
@@ -53,11 +60,17 @@ class Watcher():
                 line, col = index.split(".")    
                 print(("Key [{}] [{}] pressed @  {} : {}".format(k.char,k.keycode,line, int(col) + 1)))
         
-    def _on_copy(self):
-        pass
+    def _on_copy(self,e):
+        print("copy")
 
-    def _on_paste(self):
-        pass
+    def _on_paste(self,e):
+        print("paste")
+
+    def _on_undo(self,e):
+        print("undo")
+
+    def _on_redo(self,e):
+        print("redo")
 
     def _on_cut(self):
         pass
@@ -66,6 +79,10 @@ class Watcher():
         pass
 
     def _on_selection(self):
+        pass
+
+    def on_insert(self):
+        
         pass
 
     def _define_controls(self):

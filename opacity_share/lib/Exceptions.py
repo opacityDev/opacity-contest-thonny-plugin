@@ -1,0 +1,2 @@
+class unimplementedAbstractFunction(Exception):
+    pass
