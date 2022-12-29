@@ -1,22 +1,55 @@
-from lib2to3.pgen2.token import NEWLINE
-import tkinter as tk
-import time
-class Watcher():
+from Events import WidgetEvent
+
+class Coordinator:
 
     PRESSED=1
     RELEASED=2
 
+    def __init__(self,editor):
+        self.__editor = editor
+        self.__codeview = editor.get_code_view()
+        self.__text = editor.get_text_widget()
+        self.__events = {}
 
-    def __init__(self):
-        pass
+    def listenTo(self,event):
+        event = WidgetEvent(self.__text,event,False)
+        self.__events[event] = event
 
-    def set_editor_notebook(self,editor_notebook):
-        editor = editor_notebook.get_current_editor()
-        self.codeview = editor.get_code_view()
-        self.text = editor.get_text_widget()
-        self.editor = editor
-        self.editor_notebook = editor_notebook
-        # list to store keycode of currently pressed keys
+    def attachObserver(self,event,observer):
+        self.__events[event].addObserver(observer)    
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+ # list to store keycode of currently pressed keys
+
+
+
         self.keys_stat = dict()
         self._controls = list()
         self._define_controls()
@@ -144,4 +177,5 @@ class Watcher():
                     
             print(key_stat['last_released'],prev_key_stat['last_released'])
             self.action(watcher)
+'''
 

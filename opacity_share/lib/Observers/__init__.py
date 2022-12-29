@@ -1,3 +1,3 @@
-from Observer import Observer as Observer
-from MultiObserver import MultiObserver as MultiObserver
-
+from Observer import Observer
+from MultiObserver import MultiObserver 
+from SingleObserver import SingleObserver 

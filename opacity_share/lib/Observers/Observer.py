@@ -1,17 +1,12 @@
 from Exceptions import unimplementedAbstractFunction
 
 class Observer:
-    _ids = 0
     
-    def __init__(self):
-        self.id = Observer._ids 
-        Observer._ids+=1
-    
-    def fired(self,action):
+    def fired(self,event,e):
         raise unimplementedAbstractFunction
 
-    def onFired(self):
-        raise unimplementedAbstractFunction
+    def __onFired(self,event,e):
+        self.handler.analyze(event,e)
 
-    def sendPacket(self):
-        raise unimplementedAbstractFunction
+    def setHandler(self,handler):
+        self.handler = handler

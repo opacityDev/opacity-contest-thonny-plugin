@@ -7,10 +7,10 @@ class Event(Iterable):
     def __init__(self):
         super().__init__(Observer)
  
-    def __fireObservers(self):
+    def __fireObservers(self,e):
         with self._lock:
             for observer in self.items:
-                observer.fire()
+                observer.fire(self,e)
 
-    def happened():
-        raise unimplementedAbstractFunction
+    def happened(self,e):
+        self.__fireObservers(e)
